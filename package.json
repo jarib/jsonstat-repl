@@ -8,8 +8,12 @@
   },
   "keywords": [
     "statistics",
+    "cube", 
+    "stats",
     "json",
-    "json-stat"
+    "json-stat",
+    "jsonstat",
+    "repl"
   ],
   "engines" : {
     "node" : ">=4.1"
@@ -17,6 +21,7 @@
   "publishConfig":{
     "registry": "https://registry.npmjs.org/"
   },
+  "repository": "https://github.com/jarib/jsonstat-repl",
    "author": "jari.bakken@gmail.com",
   "license": "MIT",
   "dependencies": {
