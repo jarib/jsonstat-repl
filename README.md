@@ -8,6 +8,6 @@ For the JSONStat JS API, see the [JSON-stat Javascript Toolkit (JJT)](https://js
 
     $ jsonstat-repl http://ec.europa.eu/eurostat/wdds/rest/data/v2.1/json/en/tsdec450
 
-    > ds.Dataset(0).Dimension().map(e => e.label)
+    > ds.Dimension().map(e => e.label)
     [ 'sex', 'geo', 'time' ]
 
