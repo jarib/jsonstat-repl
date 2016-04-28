@@ -15,7 +15,7 @@
     "node" : ">=4.1"
   },
   "publishConfig":{
-    "registry": "https://npmjs.com"
+    "registry": "https://registry.npmjs.org/"
   },
    "author": "jari.bakken@gmail.com",
   "license": "MIT",
