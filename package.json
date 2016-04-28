@@ -14,7 +14,10 @@
   "engines" : {
     "node" : ">=4.1"
   },
-  "author": "jari.bakken@gmail.com",
+  "publishConfig":{
+    "registry": "https://npmjs.com"
+  },
+   "author": "jari.bakken@gmail.com",
   "license": "MIT",
   "dependencies": {
     "jsonstat": "^0.11.0",
