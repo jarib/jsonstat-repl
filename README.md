@@ -1,6 +1,8 @@
 # jsonstat-repl
 
-Explore a JSON-stat data set in the node REPL.
+Explore a [JSON-stat](https://json-stat.org/) dataset in the node REPL.
+
+For the JSONStat JS API, see the [JSON-stat Javascript Toolkit (JJT)](https://json-stat.com/)
 
 ## USAGE:
 
