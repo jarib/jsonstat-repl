@@ -1,0 +1,23 @@
+{
+  "name": "jsonstat-repl",
+  "version": "1.0.0",
+  "description": "REPL to explore JSON-stat datasets",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "statistics",
+    "json",
+    "json-stat"
+  ],
+  "engines" : {
+    "node" : ">=4.1"
+  },
+  "author": "jari.bakken@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "jsonstat": "^0.11.0",
+    "node-fetch": "^1.5.1"
+  }
+}
