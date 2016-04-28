@@ -4,23 +4,30 @@ var JSONStat = require('jsonstat');
 var repl = require('repl');
 var fetch = require('node-fetch');
 var util = require('util');
+var fs = require('fs');
 
-const url = process.argv[2]
+var url = process.argv[2]
 
 if (!url) {
-  console.error('USAGE: jsonstat-repl <url>');
+  console.error('USAGE: jsonstat-repl <url | file>');
   process.exit(1);
 }
 
-fetch(url).then(res => {
-  if (res.ok) {
-    return res.json()
-  } else {
-    return Promise.reject(
-      new Error('unable to fetch ' + url + ': ' + res.status + ' ' + res.statusText)
-    );
-  }
-}).then(data => {
+if (fs.existsSync(url)) {
+  explore(JSON.parse(fs.readFileSync(url, 'utf-8')));
+} else {
+  fetch(url).then(res => {
+    if (res.ok) {
+      return res.json()
+    } else {
+      return Promise.reject(
+        new Error('unable to fetch ' + url + ': ' + res.status + ' ' + res.statusText)
+      );
+    }
+  }).then(explore).catch(console.error)
+}
+
+function explore(data) {
   var ds = JSONStat(data);
 
   if (!ds.length) {
@@ -44,7 +51,6 @@ fetch(url).then(res => {
     })
   }
 
-
   inspect();  
   console.log('\nYour dataset is now stored in the `ds` variable. Run inspect() to see the dataset, dimensions and categories.')
 
@@ -56,7 +62,5 @@ fetch(url).then(res => {
 
   r.context.ds = ds;
   r.context.inspect = inspect;
-
-})
-.catch(console.error)
+}
 
