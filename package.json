@@ -1,6 +1,6 @@
 {
   "name": "jsonstat-repl",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Explore a JSON-stat data set in the node REPL.",
   "bin": "index.js",
   "scripts": {

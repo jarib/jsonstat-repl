@@ -41,11 +41,11 @@ function explore(data) {
     ds.Dataset().forEach(d => {
       console.log(`Dataset: ${d.label} (length = ${d.length})`)
 
-      d.Dimension().forEach(dim => {
-        console.log(`  Dimension: ${dim.label} (length = ${dim.length}, role = ${dim.role})`)
+      d.Dimension().forEach((dim, i) => {
+        console.log(`  Dimension: ${dim.label} (length = ${dim.length}, role = ${dim.role}, id = ${d.id[i]})`)
 
         dim.Category().forEach(cat => {
-          console.log(`     Category: ${cat.label} (index = ${cat.index}, unit = ${cat.unit}, id = ${dim.id[cat.index]})`)
+          console.log(`     Category: ${cat.label} (index = ${cat.index}, unit = ${cat.unit ? cat.unit.base : ''}, id = ${dim.id[cat.index]})`)
         })
       })
     })
