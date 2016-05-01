@@ -1,7 +1,7 @@
 var JSONStat = require('jsonstat');
 var repl = require('repl');
 
-function start(data) {
+module.exports = function explore(data) {
   var ds = JSONStat(data);
 
   if (!ds.length) {
@@ -38,6 +38,3 @@ function start(data) {
   r.context.inspect = inspect;
 }
 
-module.exports = {
-    start: start
-}

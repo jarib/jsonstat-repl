@@ -1,31 +1,33 @@
 {
   "name": "jsonstat-repl",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Explore a JSON-stat data set in the node REPL.",
-  "bin": "index.js",
+  "bin": "cli.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "statistics",
-    "cube", 
+    "cube",
     "stats",
     "json",
     "json-stat",
     "jsonstat",
     "repl"
   ],
-  "engines" : {
-    "node" : ">=4.1"
+  "engines": {
+    "node": ">=4.1"
   },
-  "publishConfig":{
+  "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "repository": "https://github.com/jarib/jsonstat-repl",
-   "author": "jari.bakken@gmail.com",
+  "author": "jari.bakken@gmail.com",
   "license": "MIT",
   "dependencies": {
     "jsonstat": "^0.11.0",
-    "node-fetch": "^1.5.1"
+    "node-fetch": "^1.5.1",
+    "yargs": "^4.6.0"
   }
 }
