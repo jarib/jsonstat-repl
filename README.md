@@ -16,4 +16,4 @@ On the command line:
 As a module:
 
     import jsonStatRepl from 'jsonstat-repl';
-    jsonStatRepl.explore(data);
+    jsonStatRepl.start(data);
