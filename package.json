@@ -1,6 +1,6 @@
 {
   "name": "jsonstat-repl",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Explore a JSON-stat data set in the node REPL.",
   "bin": "cli.js",
   "main": "index.js",
@@ -26,7 +26,7 @@
   "author": "jari.bakken@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "jsonstat": "^0.11.0",
+    "jsonstat": "0",
     "node-fetch": "^1.5.1",
     "yargs": "^4.6.0"
   }
